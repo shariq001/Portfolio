@@ -19,15 +19,6 @@ export const projects: Project[] = [
     visibility: 'public'
   },
   {
-    id: 'ai-employee',
-    title: 'AI Employee Automation Tool',
-    description: 'Secure Python-based automation agent using LLMs + Workspace/LinkedIn APIs for outreach and content generation.',
-    techPills: ['Python', 'LLMs', 'LinkedIn API', 'Google API', 'Workspace API'],
-    liveUrl: null,
-    repoUrl: 'https://github.com/shariq001/AI_Employee_Silver',
-    visibility: 'public'
-  },
-  {
     id: 'ugc-creator',
     title: 'UGC Creator Portfolio',
     description: 'Highly responsive Next.js media gallery and client outreach tool.',
@@ -38,11 +29,20 @@ export const projects: Project[] = [
   },
   {
     id: 'dashboard-sdd',
-    title: 'Dashboard — Frontend via SDD',
+    title: 'Next-Gen Dashboard Interface',
     description: 'Dashboard engineered strictly using Spec-Driven Development without manual intervention.',
     techPills: ['Next.js', 'Tailwind CSS', 'SDD'],
     liveUrl: 'https://dashboard-shariq.vercel.app',
     repoUrl: 'https://github.com/shariq001/dashboard',
+    visibility: 'public'
+  },
+  {
+    id: 'ai-employee',
+    title: 'AI Employee',
+    description: 'Secure Python-based automation agent using LLMs + LinkedIn/Google APIs for outreach and content generation.',
+    techPills: ['Python', 'LLMs', 'LinkedIn API', 'Google API'],
+    liveUrl: null,
+    repoUrl: 'https://github.com/shariq001/AI_Employee_Silver',
     visibility: 'public'
   },
   {
