@@ -1,41 +1,62 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-/** Main navigation component with mobile drawer */
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const links = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Skills', path: '/about#skills' },
     { name: 'Projects', path: '/projects' },
     { name: 'Contact', path: '/contact' }
   ];
 
   return (
-    <nav className="fixed top-0 z-50 w-full bg-surface/60 backdrop-blur-xl border-b border-white/5 transition-all duration-500">
-      {/* Animated Glowing Bottom Border */}
-      <div className="absolute bottom-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-primary to-transparent animate-gradient opacity-50"></div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 md:h-20">
-          <Link href="/" className="group relative flex items-center">
-            <span className="font-mono text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-primary group-hover:to-white transition-all duration-500">
-              MS
-            </span>
-            <span className="absolute -bottom-2 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
+    <div className="fixed top-0 left-0 w-full z-50 flex justify-center mt-4 sm:mt-6 px-4 pointer-events-none">
+      <nav 
+        className={`pointer-events-auto relative w-full max-w-3xl transition-all duration-700 rounded-3xl sm:rounded-full bg-surface/30 backdrop-blur-2xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.3)] ${
+          scrolled ? 'shadow-[0_8px_32px_rgba(0,255,255,0.15)] bg-surface/60 border-primary/20' : ''
+        }`}
+      >
+        {/* Animated glowing pseudo-border inner light */}
+        <div className="absolute inset-0 rounded-3xl sm:rounded-full pointer-events-none p-[1px] overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/40 to-transparent animate-gradient opacity-50 w-[200%]"></div>
+        </div>
+
+        <div className="relative flex justify-between items-center px-4 sm:px-6 py-3">
+          {/* Futuristic Logo Bubble */}
+          <Link href="/" className="group relative flex items-center z-10">
+            <div className="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 border border-primary/30 group-hover:bg-primary/30 group-hover:border-primary/60 transition-all duration-500 shadow-[0_0_15px_rgba(0,255,255,0.1)] group-hover:shadow-[0_0_25px_rgba(0,255,255,0.4)]">
+              <span className="font-mono text-sm font-black text-white group-hover:text-white transition-colors">
+                MS
+              </span>
+            </div>
           </Link>
-          <div className="hidden md:flex space-x-8">
+
+          {/* Desktop Pill Nav */}
+          <div className="hidden md:flex items-center space-x-1 bg-black/40 p-1.5 rounded-full border border-white/5 backdrop-blur-md">
             {links.map((link) => (
-              <Link key={link.name} href={link.path} className="relative text-sm font-medium text-muted hover:text-white transition-colors py-2 group">
+              <Link key={link.name} href={link.path} className="relative px-6 py-2 text-sm font-semibold text-muted hover:text-white transition-all duration-300 rounded-full hover:bg-white/10 hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.2)]">
                 {link.name}
-                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-right group-hover:origin-left"></span>
               </Link>
             ))}
           </div>
-          <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+          {/* Mobile Hamburger Toggle */}
+          <button 
+            className="md:hidden relative z-10 w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-colors" 
+            onClick={() => setIsOpen(!isOpen)} 
+            aria-label="Toggle menu"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               ) : (
@@ -44,18 +65,23 @@ export default function Nav() {
             </svg>
           </button>
         </div>
-      </div>
-      {isOpen && (
-        <div className="md:hidden bg-surface border-b border-border">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+
+        {/* Mobile Menu Dropdown (Expands smoothly within the pill) */}
+        <div className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'}`}>
+          <div className="px-4 pb-4 pt-1 space-y-2">
             {links.map((link) => (
-              <Link key={link.name} href={link.path} onClick={() => setIsOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium text-muted hover:text-white hover:bg-white/5 hover:pl-5 transition-all duration-300 border-l-2 border-transparent hover:border-primary">
+              <Link 
+                key={link.name} 
+                href={link.path} 
+                onClick={() => setIsOpen(false)} 
+                className="block px-4 py-3 rounded-2xl text-center font-bold text-muted hover:text-white bg-white/5 hover:bg-primary/20 hover:shadow-[0_0_15px_rgba(0,255,255,0.2)] hover:border-primary/30 border border-transparent transition-all duration-300"
+              >
                 {link.name}
               </Link>
             ))}
           </div>
         </div>
-      )}
-    </nav>
+      </nav>
+    </div>
   );
 }
