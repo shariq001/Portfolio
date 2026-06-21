@@ -48,6 +48,9 @@ export default function Nav() {
                 {link.name}
               </Link>
             ))}
+            <a href="/Muhammad_Shariq_Resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 ml-2 px-5 py-2 text-sm font-bold text-surface bg-primary hover:bg-primary-dim rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_rgba(0,255,255,0.4)]">
+              Resume
+            </a>
           </div>
 
           {/* Mobile Hamburger Toggle */}
@@ -67,7 +70,7 @@ export default function Nav() {
         </div>
 
         {/* Mobile Menu Dropdown (Expands smoothly within the pill) */}
-        <div className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'}`}>
+        <div className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-72 opacity-100' : 'max-h-0 opacity-0'}`}>
           <div className="px-4 pb-4 pt-1 space-y-2">
             {links.map((link) => (
               <Link 
@@ -79,6 +82,10 @@ export default function Nav() {
                 {link.name}
               </Link>
             ))}
+            <a href="/Muhammad_Shariq_Resume.pdf" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl text-center font-bold text-surface bg-primary hover:bg-primary-dim transition-all duration-300 shadow-[0_0_15px_rgba(0,255,255,0.3)]">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+              Download Resume
+            </a>
           </div>
         </div>
       </nav>
