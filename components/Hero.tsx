@@ -1,20 +1,13 @@
 import Link from 'next/link';
+import RandomStars from './RandomStars';
 
 /** Hero section component with headline and CTAs */
 export default function Hero() {
   return (
     <section id="hero" className="min-h-screen flex items-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative overflow-hidden">
       
-      {/* Background Stars */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-[10%] left-[15%] w-5 h-5 bg-white clip-star star" style={{ animationDelay: '0s' }}></div>
-        <div className="absolute top-[25%] left-[70%] w-6 h-6 bg-primary clip-star star" style={{ animationDelay: '1.5s' }}></div>
-        <div className="absolute top-[60%] left-[10%] w-5 h-5 bg-white clip-star star" style={{ animationDelay: '0.8s' }}></div>
-        <div className="absolute top-[80%] left-[80%] w-8 h-8 bg-primary clip-star star" style={{ animationDelay: '2.2s' }}></div>
-        <div className="absolute top-[40%] left-[85%] w-4 h-4 bg-white clip-star star" style={{ animationDelay: '0.3s' }}></div>
-        <div className="absolute top-[75%] left-[30%] w-6 h-6 bg-primary clip-star star" style={{ animationDelay: '3.1s' }}></div>
-        <div className="absolute top-[15%] left-[45%] w-5 h-5 bg-white clip-star star" style={{ animationDelay: '1.2s' }}></div>
-      </div>
+      {/* Background Stars (Dynamic Random Spawns) */}
+      <RandomStars />
 
       {/* Rotating Realistic Circle / Orbital Ring */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] rounded-full border border-white/5 border-t-primary/40 border-r-primary/10 animate-spin-slow pointer-events-none"></div>
