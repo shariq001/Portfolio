@@ -1,4 +1,39 @@
+'use client';
+import { FormEvent, useState } from 'react';
+import { useRouter } from 'next/navigation';
+
 export default function Contact() {
+  const router = useRouter();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    
+    try {
+      const response = await fetch('https://formspree.io/f/xgojwbpd', {
+        method: 'POST',
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        router.push('/thanks');
+      } else {
+        alert("Oops! There was a problem submitting your form.");
+        setIsSubmitting(false);
+      }
+    } catch (error) {
+      alert("Oops! There was a problem submitting your form.");
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto py-20 relative">
       
@@ -16,41 +51,42 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start relative z-10 w-full">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-stretch relative z-10 w-full">
         
         {/* Left Column: Interactive Contact Form */}
-        <div className="bg-surface/30 backdrop-blur-xl border border-white/10 rounded-[2rem] p-8 shadow-2xl relative overflow-hidden group hover:border-primary/30 transition-all duration-500 animate-fade-up" style={{ animationDelay: '0.2s' }}>
+        <div className="bg-surface/30 backdrop-blur-xl border border-white/10 rounded-[2rem] p-8 shadow-2xl relative overflow-hidden group hover:border-primary/30 transition-all duration-500 animate-fade-up h-full flex flex-col" style={{ animationDelay: '0.2s' }}>
           <div className="absolute -top-32 -left-32 w-64 h-64 bg-primary/10 rounded-full blur-[50px] pointer-events-none group-hover:bg-primary/20 transition-colors duration-700"></div>
           
-          <form action="https://formspree.io/f/xgojwbpd" method="POST" className="relative z-10 space-y-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-white/80 mb-2 ml-1">Name</label>
-                <input type="text" id="name" name="name" required className="w-full bg-black/40 border border-white/10 rounded-xl px-5 py-3.5 text-white placeholder-muted focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-300 shadow-inner" placeholder="John Doe" />
+          <form onSubmit={handleSubmit} className="relative z-10 space-y-6 flex-grow flex flex-col justify-between">
+            <div className="space-y-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-semibold text-white/80 mb-2 ml-1">Name</label>
+                  <input type="text" id="name" name="name" required className="w-full bg-black/40 border border-white/10 rounded-xl px-5 py-3.5 text-white placeholder-muted focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-300 shadow-inner" placeholder="John Doe" />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-semibold text-white/80 mb-2 ml-1">Email</label>
+                  <input type="email" id="email" name="email" required className="w-full bg-black/40 border border-white/10 rounded-xl px-5 py-3.5 text-white placeholder-muted focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-300 shadow-inner" placeholder="john@example.com" />
+                </div>
               </div>
+              
               <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-white/80 mb-2 ml-1">Email</label>
-                <input type="email" id="email" name="email" required className="w-full bg-black/40 border border-white/10 rounded-xl px-5 py-3.5 text-white placeholder-muted focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-300 shadow-inner" placeholder="john@example.com" />
+                <label htmlFor="message" className="block text-sm font-semibold text-white/80 mb-2 ml-1">Message</label>
+                <textarea id="message" name="message" required rows={7} className="w-full bg-black/40 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-muted focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-300 resize-none shadow-inner" placeholder="How can I help you?"></textarea>
               </div>
             </div>
             
-            <div>
-              <label htmlFor="message" className="block text-sm font-semibold text-white/80 mb-2 ml-1">Message</label>
-              <textarea id="message" name="message" required rows={6} className="w-full bg-black/40 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-muted focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-300 resize-none shadow-inner" placeholder="How can I help you?"></textarea>
-            </div>
-            
-            <button type="submit" className="w-full bg-primary text-surface font-bold py-4 rounded-xl hover:bg-primary-dim transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] hover:-translate-y-1 active:scale-[0.98] flex items-center justify-center gap-2">
-              Send Message
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            <button type="submit" disabled={isSubmitting} className="w-full mt-4 bg-primary text-surface font-bold py-4 rounded-xl hover:bg-primary-dim transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] hover:-translate-y-1 active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-70 disabled:hover:translate-y-0">
+              {isSubmitting ? 'Sending...' : 'Send Message'}
+              {!isSubmitting && <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>}
             </button>
           </form>
         </div>
 
         {/* Right Column: Sleek Social Links */}
-        <div className="flex flex-col space-y-10 animate-fade-up" style={{ animationDelay: '0.4s' }}>
-          
-          <div className="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-md">
-            <p className="text-lg text-muted leading-relaxed mb-8">
+        <div className="flex flex-col animate-fade-up h-full" style={{ animationDelay: '0.4s' }}>
+          <div className="bg-white/5 border border-white/10 rounded-[2rem] p-8 backdrop-blur-md h-full flex flex-col justify-center shadow-xl">
+            <p className="text-lg text-muted leading-relaxed mb-10">
               Whether you have a project in mind, want to discuss AI integrations, or just want to say hi — my inbox is always open. Fill out the form or reach out directly via my socials.
             </p>
 
