@@ -20,7 +20,9 @@
     animation: gradient-x 4s ease infinite;
   }
   .animate-typing {
-    animation: typing-wipe 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    animation: 
+      typing-width 6s cubic-bezier(0.4, 0, 0.2, 1) infinite,
+      blink-caret .75s step-end infinite;
   }
   .animate-spin-slow {
     animation: spin-slow 20s linear infinite;
@@ -52,10 +54,15 @@
   }
 }
 
-@keyframes typing-wipe {
-  0%, 10% { clip-path: inset(0 100% 0 0); }
-  40%, 60% { clip-path: inset(0 0 0 0); }
-  90%, 100% { clip-path: inset(0 100% 0 0); }
+@keyframes typing-width {
+  0%, 10% { max-width: 0; }
+  40%, 60% { max-width: 32ch; }
+  90%, 100% { max-width: 0; }
+}
+
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: var(--color-primary); }
 }
 
 @keyframes spin-slow {
