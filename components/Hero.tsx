@@ -7,13 +7,13 @@ export default function Hero() {
       
       {/* Background Stars */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-[10%] left-[15%] w-3 h-3 bg-white clip-star star" style={{ animationDelay: '0s' }}></div>
-        <div className="absolute top-[25%] left-[70%] w-4 h-4 bg-primary clip-star star" style={{ animationDelay: '1.5s' }}></div>
-        <div className="absolute top-[60%] left-[10%] w-3 h-3 bg-white clip-star star" style={{ animationDelay: '0.8s' }}></div>
-        <div className="absolute top-[80%] left-[80%] w-5 h-5 bg-primary clip-star star" style={{ animationDelay: '2.2s' }}></div>
-        <div className="absolute top-[40%] left-[85%] w-2.5 h-2.5 bg-white clip-star star" style={{ animationDelay: '0.3s' }}></div>
-        <div className="absolute top-[75%] left-[30%] w-4 h-4 bg-primary clip-star star" style={{ animationDelay: '3.1s' }}></div>
-        <div className="absolute top-[15%] left-[45%] w-3 h-3 bg-white clip-star star" style={{ animationDelay: '1.2s' }}></div>
+        <div className="absolute top-[10%] left-[15%] w-5 h-5 bg-white clip-star star" style={{ animationDelay: '0s' }}></div>
+        <div className="absolute top-[25%] left-[70%] w-6 h-6 bg-primary clip-star star" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute top-[60%] left-[10%] w-5 h-5 bg-white clip-star star" style={{ animationDelay: '0.8s' }}></div>
+        <div className="absolute top-[80%] left-[80%] w-8 h-8 bg-primary clip-star star" style={{ animationDelay: '2.2s' }}></div>
+        <div className="absolute top-[40%] left-[85%] w-4 h-4 bg-white clip-star star" style={{ animationDelay: '0.3s' }}></div>
+        <div className="absolute top-[75%] left-[30%] w-6 h-6 bg-primary clip-star star" style={{ animationDelay: '3.1s' }}></div>
+        <div className="absolute top-[15%] left-[45%] w-5 h-5 bg-white clip-star star" style={{ animationDelay: '1.2s' }}></div>
       </div>
 
       {/* Rotating Realistic Circle / Orbital Ring */}
