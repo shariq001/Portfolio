@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter, Geist, Fira_Code } from 'next/font/google';
 import './globals.css';
-
+import Nav from '@/components/Nav';
+import Footer from '@/components/Footer';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const geist = Geist({ subsets: ['latin'], variable: '--font-geist' });
 const firaCode = Fira_Code({ subsets: ['latin'], variable: '--font-fira-code' });
@@ -24,8 +25,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`scroll-smooth ${inter.variable} ${geist.variable} ${firaCode.variable}`}>
-      <body className="bg-base text-white antialiased">
-        {children}
+      <body className="bg-base text-white antialiased flex flex-col min-h-screen">
+        <Nav />
+        <div className="flex-grow">
+          {children}
+        </div>
+        <Footer />
       </body>
     </html>
   );
