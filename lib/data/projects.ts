@@ -24,7 +24,7 @@ export const projects: Project[] = [
     description: 'Highly responsive Next.js media gallery and client outreach tool.',
     techPills: ['Next.js', 'Tailwind CSS', 'Vercel', 'SDD'],
     liveUrl: 'https://ugc-creator-portfolio.vercel.app/',
-    repoUrl: 'https://github.com/shariq001/ugc-creator-portfolio',
+    repoUrl: 'https://github.com/shariq001/UGC_Creator_Portfolio.git',
     visibility: 'public'
   },
   {
@@ -32,8 +32,8 @@ export const projects: Project[] = [
     title: 'Next-Gen Dashboard Interface',
     description: 'Dashboard engineered strictly using Spec-Driven Development without manual intervention.',
     techPills: ['Next.js', 'Tailwind CSS', 'SDD'],
-    liveUrl: 'https://dashboard-shariq.vercel.app',
-    repoUrl: 'https://github.com/shariq001/dashboard',
+    liveUrl: 'https://dashboard-api-integration.vercel.app/',
+    repoUrl: 'https://github.com/shariq001/Dashboard_API_Integration.git',
     visibility: 'public'
   },
   {
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     description: 'A versatile chatbot for general queries using large language models and simple prompt pipelines.',
     techPills: ['Python', 'LLMs', 'Panel'],
     liveUrl: null,
-    repoUrl: 'https://github.com/shariq001/General-Chatbot',
+    repoUrl: 'https://github.com/shariq001/DeepLearning_General_Chatbot.git',
     visibility: 'public'
   },
   {
