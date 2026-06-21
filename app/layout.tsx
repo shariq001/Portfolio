@@ -7,15 +7,14 @@ const geist = Geist({ subsets: ['latin'], variable: '--font-geist' });
 const firaCode = Fira_Code({ subsets: ['latin'], variable: '--font-fira-code' });
 
 export const metadata: Metadata = {
-  title: 'Muhammad Shariq — Software Engineer',
-  description: 'Portfolio of Muhammad Shariq — Software Engineer and Frontend Developer specializing in Python, Java, and Next.js, with a focus on agentic AI and autonomous workflows.',
+  title: 'Muhammad Shariq — Software Engineer & Frontend Developer',
+  description: 'Portfolio of Muhammad Shariq — Next.js developer focused on agentic AI, RAG, and autonomous workflows. HITMS CS student, Innova Tech alum.',
   openGraph: {
     title: 'Muhammad Shariq — Software Engineer',
-    description: 'Portfolio of Muhammad Shariq — Software Engineer and Frontend Developer',
-    // url: 'https://...',
-    // siteName: 'Muhammad Shariq Portfolio',
-    // images: [{ url: 'https://...' }],
-  },
+    description: 'Next.js · Python · Agentic AI',
+    url: 'https://shariq001.vercel.app',
+    type: 'website'
+  }
 };
 
 export default function RootLayout({
