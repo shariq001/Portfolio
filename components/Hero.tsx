@@ -20,10 +20,10 @@ export default function Hero() {
       </p>
       
       <div className="flex flex-wrap gap-4">
-        <Link href="#projects" className="bg-primary text-base font-medium px-6 py-3 rounded text-surface hover:bg-primary-dim transition-colors">
+        <Link href="/projects" className="bg-primary text-base font-medium px-6 py-3 rounded text-surface hover:bg-primary-dim transition-colors">
           View Projects →
         </Link>
-        <Link href="#contact" className="border border-primary text-primary font-medium px-6 py-3 rounded hover:bg-primary/10 transition-colors">
+        <Link href="/contact" className="border border-primary text-primary font-medium px-6 py-3 rounded hover:bg-primary/10 transition-colors">
           Get In Touch
         </Link>
       </div>
