@@ -1,27 +1,27 @@
 import Nav from '@/components/Nav';
+import Hero from '@/components/Hero';
+import About from '@/components/About';
+import Skills from '@/components/Skills';
+import Certifications from '@/components/Certifications';
+import Contact from '@/components/Contact';
+import Footer from '@/components/Footer';
 
-/** Root page component serving as a shell */
+/** Root page composing all portfolio sections */
 export default function Home() {
   return (
     <>
       <Nav />
       <main className="pt-16 min-h-screen">
-        <section id="hero" className="min-h-screen flex items-center justify-center border-b border-border/50">
-          {/* Hero section placeholder */}
-        </section>
-        <section id="about" className="min-h-screen flex items-center justify-center border-b border-border/50">
-          {/* About section placeholder */}
-        </section>
-        <section id="skills" className="min-h-screen flex items-center justify-center border-b border-border/50">
-          {/* Skills section placeholder */}
-        </section>
+        <Hero />
+        <About />
+        <Skills />
         <section id="projects" className="min-h-screen flex items-center justify-center border-b border-border/50">
-          {/* Projects section placeholder */}
+          <p className="text-muted text-xl font-mono">{'/* Projects section placeholder from spec-03 */'}</p>
         </section>
-        <section id="contact" className="min-h-screen flex items-center justify-center">
-          {/* Contact section placeholder */}
-        </section>
+        <Certifications />
+        <Contact />
       </main>
+      <Footer />
     </>
   );
 }
