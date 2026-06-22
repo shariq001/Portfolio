@@ -3,18 +3,17 @@ import { Inter, Geist, Fira_Code } from 'next/font/google';
 import './globals.css';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
+import ChatWidget from '@/components/ChatWidget';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const geist = Geist({ subsets: ['latin'], variable: '--font-geist' });
 const firaCode = Fira_Code({ subsets: ['latin'], variable: '--font-fira-code' });
 
 export const metadata: Metadata = {
-  title: 'Muhammad Shariq — Software Engineer & Frontend Developer',
+  title: 'Muhammad Shariq — Frontend Developer',
   description: 'Portfolio of Muhammad Shariq — Next.js developer focused on agentic AI, RAG, and autonomous workflows. HITMS CS student, Innova Tech alum.',
   openGraph: {
-    title: 'Muhammad Shariq — Software Engineer',
+    title: 'Muhammad Shariq',
     description: 'Next.js · Python · Agentic AI',
-    url: 'https://shariq001.vercel.app',
-    type: 'website'
   }
 };
 
@@ -30,6 +29,7 @@ export default function RootLayout({
         <div className="flex-grow">
           {children}
         </div>
+        <ChatWidget />
         <Footer />
       </body>
     </html>
