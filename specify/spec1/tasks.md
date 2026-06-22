@@ -34,7 +34,7 @@
 
 ## 6. Verification & Acceptance
 - [ ] 6.1 Verify `npm run dev` starts without errors.
-- [ ] 6.2 Verify TypeScript reports zero errors (`npx tsc --noEmit`).
+- [x] 6.2 Verify TypeScript reports zero errors (`npx tsc --noEmit`).
 - [x] 6.3 Verify no hardcoded hex colors exist in components.
 - [ ] 6.4 Verify Nav is visible/responsive on mobile (320px) and desktop (1280px).
 - [ ] 6.5 Verify Lighthouse accessibility on the shell page.

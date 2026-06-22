@@ -3,11 +3,11 @@ export default function Experience() {
     <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative">
       <div className="absolute top-20 right-20 w-72 h-72 bg-purple-500/10 rounded-full blur-[100px] pointer-events-none"></div>
 
-      <div className="mb-12 animate-fade-up">
+      <div className="mb-12 animate-fade-up text-center sm:text-left">
         <h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-white/60 font-sans inline-block pb-2">
           Experience
         </h2>
-        <div className="w-24 h-1 bg-gradient-to-r from-primary to-transparent mt-4 rounded-full"></div>
+        <div className="w-24 h-1 bg-gradient-to-r from-primary to-transparent mt-4 mx-auto sm:mx-0 rounded-full"></div>
       </div>
 
       <div className="relative border-l-2 border-white/10 pl-8 ml-4 md:ml-0 md:pl-0 md:border-none space-y-12">

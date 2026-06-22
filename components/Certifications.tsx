@@ -31,7 +31,7 @@ export default function Certifications() {
           <p className="text-muted font-mono mt-2 flex items-center justify-center sm:justify-start gap-2">
             Issued by Google
             <span className="w-1 h-1 rounded-full bg-white/30"></span>
-            2024
+            2026
           </p>
         </div>
 

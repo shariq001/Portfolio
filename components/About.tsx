@@ -1,3 +1,5 @@
+import GithubStats from './GithubStats';
+
 export default function About() {
   return (
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative">
@@ -5,7 +7,7 @@ export default function About() {
 
       <div className="w-full flex flex-col lg:flex-row gap-16 items-center">
         <div className="flex-1 relative z-10 animate-fade-up">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-white/60 font-sans inline-block pb-2 mb-8">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-white/60 font-sans inline-block pb-2 mb-8 text-center sm:text-left w-full sm:w-auto">
             About Me
           </h2>
           
@@ -24,6 +26,8 @@ export default function About() {
               </p>
             </div>
           </div>
+          
+          <GithubStats />
         </div>
 
         {/* Decorative Visual element */}

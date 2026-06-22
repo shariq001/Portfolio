@@ -20,9 +20,9 @@ export default function Nav() {
   ];
 
   return (
-    <div className="fixed top-0 left-0 w-full z-50 flex justify-center mt-4 sm:mt-6 px-4 pointer-events-none">
+    <div className="fixed top-0 left-0 w-full z-50 flex justify-center mt-0 sm:mt-6 px-0 sm:px-8 pointer-events-none">
       <nav 
-        className={`pointer-events-auto relative w-full max-w-3xl transition-all duration-700 rounded-3xl sm:rounded-full bg-surface/30 backdrop-blur-2xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.3)] ${
+        className={`pointer-events-auto relative w-full max-w-3xl transition-all duration-700 rounded-b-3xl sm:rounded-full bg-surface/30 backdrop-blur-2xl border-b border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.3)] ${
           scrolled ? 'shadow-[0_8px_32px_rgba(0,255,255,0.15)] bg-surface/60 border-primary/20' : ''
         }`}
       >
@@ -31,7 +31,7 @@ export default function Nav() {
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/40 to-transparent animate-gradient opacity-50 w-[200%]"></div>
         </div>
 
-        <div className="relative flex justify-between items-center px-4 sm:px-6 py-3">
+        <div className="relative flex justify-between items-center px-5 sm:px-6 py-3">
           {/* Futuristic Logo Bubble */}
           <Link href="/" className="group relative flex items-center z-10">
             <div className="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 border border-primary/30 group-hover:bg-primary/30 group-hover:border-primary/60 transition-all duration-500 shadow-[0_0_15px_rgba(0,255,255,0.1)] group-hover:shadow-[0_0_25px_rgba(0,255,255,0.4)]">

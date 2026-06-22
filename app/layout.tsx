@@ -3,18 +3,49 @@ import { Inter, Geist, Fira_Code } from 'next/font/google';
 import './globals.css';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
-import ChatWidget from '@/components/ChatWidget';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const geist = Geist({ subsets: ['latin'], variable: '--font-geist' });
 const firaCode = Fira_Code({ subsets: ['latin'], variable: '--font-fira-code' });
 
 export const metadata: Metadata = {
-  title: 'Muhammad Shariq — Frontend Developer',
-  description: 'Portfolio of Muhammad Shariq — Next.js developer focused on agentic AI, RAG, and autonomous workflows. HITMS CS student, Innova Tech alum.',
+  title: {
+    default: 'Muhammad Shariq — Frontend Developer & AI Engineer',
+    template: '%s | Muhammad Shariq',
+  },
+  description: 'Portfolio of Muhammad Shariq, a Next.js frontend developer focused on Agentic AI, RAG pipelines, and autonomous workflows. Computer Science student at HITMS and Innova Tech alum.',
+  keywords: ['Muhammad Shariq', 'Frontend Developer', 'AI Engineer', 'Next.js Developer', 'React Developer', 'Agentic AI', 'RAG Pipelines', 'TypeScript', 'Python'],
+  authors: [{ name: 'Muhammad Shariq' }],
+  creator: 'Muhammad Shariq',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
-    title: 'Muhammad Shariq',
-    description: 'Next.js · Python · Agentic AI',
-  }
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://github.com/shariq001',
+    title: 'Muhammad Shariq — Frontend Developer & AI Engineer',
+    description: 'Portfolio of Muhammad Shariq, a Next.js frontend developer focused on Agentic AI and stunning web experiences.',
+    siteName: 'Muhammad Shariq Portfolio',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Muhammad Shariq — Frontend Developer & AI Engineer',
+    description: 'Portfolio of Muhammad Shariq, a Next.js frontend developer focused on Agentic AI and stunning web experiences.',
+  },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({
@@ -23,13 +54,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`scroll-smooth ${inter.variable} ${geist.variable} ${firaCode.variable}`}>
-      <body className="bg-base text-white antialiased flex flex-col min-h-screen">
+    <html lang="en" className={`scroll-smooth overflow-x-hidden w-full ${inter.variable} ${geist.variable} ${firaCode.variable}`}>
+      <body className="bg-base text-white antialiased flex flex-col min-h-screen overflow-x-hidden w-full">
         <Nav />
         <div className="flex-grow">
           {children}
         </div>
-        <ChatWidget />
         <Footer />
       </body>
     </html>

@@ -22,7 +22,7 @@ export default function ProjectCard({ project, index }: { project: Project, inde
            ))}
          </div>
 
-         <div className="flex items-center gap-3 mt-auto">
+         <div className="flex flex-wrap items-center gap-3 mt-auto">
            {project.liveUrl && (
              <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="bg-primary/10 border border-primary/20 text-primary font-semibold px-5 py-2.5 rounded-lg text-sm hover:bg-primary hover:text-surface transition-all duration-300">
                Live Demo →

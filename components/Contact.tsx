@@ -98,7 +98,7 @@ export default function Contact() {
                 </div>
                 <div className="transform transition-transform duration-300 group-hover:translate-x-2">
                   <div className="text-sm font-bold uppercase tracking-wider text-muted mb-1 group-hover:text-white transition-colors">Email</div>
-                  <div className="text-white font-sans text-base md:text-lg font-bold group-hover:text-primary transition-colors">shariqfazal123@gmail.com</div>
+                  <div className="text-[#ffffff] font-sans text-sm sm:text-white md:text-lg group-hover:text-primary transition-colors break-all">shariqfazal123@gmail.com</div>
                 </div>
               </a>
 
@@ -109,7 +109,7 @@ export default function Contact() {
                 </div>
                 <div className="transform transition-transform duration-300 group-hover:translate-x-2">
                   <div className="text-sm font-bold uppercase tracking-wider text-muted mb-1 group-hover:text-white transition-colors">Phone</div>
-                  <div className="text-white font-sans text-base md:text-lg font-bold group-hover:text-primary transition-colors">+92 318 2965978</div>
+                  <div className="text-[#ffffff] font-sans text-sm sm:text-white md:text-lg group-hover:text-primary transition-colors">+92 318 2965978</div>
                 </div>
               </a>
 
@@ -120,7 +120,7 @@ export default function Contact() {
                 </div>
                 <div className="transform transition-transform duration-300 group-hover:translate-x-2">
                   <div className="text-sm font-bold uppercase tracking-wider text-muted mb-1 group-hover:text-white transition-colors">LinkedIn</div>
-                  <div className="text-white font-sans text-base md:text-lg font-bold group-hover:text-primary transition-colors">/muhammad---shariq</div>
+                  <div className="text-[#ffffff] font-sans text-sm sm:text-white md:text-lg  group-hover:text-primary transition-colors break-all">/muhammad---shariq</div>
                 </div>
               </a>
 
@@ -131,7 +131,7 @@ export default function Contact() {
                 </div>
                 <div className="transform transition-transform duration-300 group-hover:translate-x-2">
                   <div className="text-sm font-bold uppercase tracking-wider text-muted mb-1 group-hover:text-white transition-colors">GitHub</div>
-                  <div className="text-white font-sans text-base md:text-lg font-bold group-hover:text-primary transition-colors">@shariq001</div>
+                  <div className="text-[#ffffff] font-sans text-sm sm:text-white md:text-lg group-hover:text-primary transition-colors">@shariq001</div>
                 </div>
               </a>
             </div>
