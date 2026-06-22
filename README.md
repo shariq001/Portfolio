@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+</div>
 
-## Getting Started
+<h1 align="center">Muhammad Shariq — Frontend & AI Developer</h1>
 
-First, run the development server:
+<p align="center">
+  <strong>Building intelligent web experiences — from responsive UIs to autonomous AI workflows.</strong>
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<p align="center">
+  <a href="#about-the-project">About The Project</a> •
+  <a href="#key-features">Key Features</a> •
+  <a href="#technical-stack">Technical Stack</a> •
+  <a href="#local-development">Local Development</a> •
+  <a href="#lets-connect">Let's Connect</a>
+</p>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🌌 About The Project
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This repository contains the source code for my personal portfolio. Built with a modern, mobile-first architecture, the platform serves as a central hub for my professional identity, showcasing my expertise in **Frontend Engineering** and **Agentic AI**. 
 
-## Learn More
+It is designed with a premium, glassmorphic UI, fluid micro-animations, and dynamic visual layouts that scale flawlessly from ultra-small mobile screens to massive 4K desktop displays.
 
-To learn more about Next.js, take a look at the following resources:
+## ✨ Key Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Blazing Fast Performance:** Powered by the Next.js App Router, generating pure static HTML for instant page loads.
+- **Flawless Responsiveness:** Mathematically perfect layouts down to 320px mobile screens, powered by Tailwind CSS v4.
+- **Enterprise SEO:** Out-of-the-box OpenGraph generation, programmatic dynamic sitemaps, and strict `robots.txt` routing.
+- **Glassmorphic Design System:** Complex, high-contrast blurred UI components, gradient orbs, and CSS micro-animations.
+- **Interactive Routing:** Smooth, multi-page client-side transitions across `/about`, `/projects`, and `/contact`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠 Technical Stack
 
-## Deploy on Vercel
+### Frontend Architecture
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animation:** Native CSS keyframes & dynamic Tailwind utilities
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Integrations
+- **Form Handling:** Formspree API integration
+- **Deployment & Hosting:** Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Local Development
+
+Want to run this project locally? Follow these steps:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/shariq001/Portfolio.git
+   cd Portfolio
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+
+## 🤝 Let's Connect
+
+I am always open to discussing new opportunities, AI integrations, or frontend architecture! 
+
+<div align="center">
+  
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/muhammad---shariq)
+  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/shariq001)
+  [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:shariqfazal123@gmail.com)
+
+</div>
+
+<p align="center">
+  <i>Designed and developed with ❤️ by Muhammad Shariq</i>
+</p>
