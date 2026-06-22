@@ -74,7 +74,13 @@ export default function ChatWidget() {
           </div>
 
           {/* Input */}
-          <form onSubmit={handleSubmit} className="p-3 border-t border-white/10 bg-black/20">
+          <form 
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleSubmit(e);
+            }} 
+            className="p-3 border-t border-white/10 bg-black/20"
+          >
             <input
               className="w-full bg-white/5 border border-white/10 rounded-full px-4 py-2.5 text-sm text-white focus:outline-none focus:border-primary/50 transition-colors"
               value={input}
