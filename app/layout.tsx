@@ -8,6 +8,7 @@ const geist = Geist({ subsets: ['latin'], variable: '--font-geist' });
 const firaCode = Fira_Code({ subsets: ['latin'], variable: '--font-fira-code' });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://muhammad---shariq.vercel.app'),
   title: {
     default: 'Muhammad Shariq — Frontend Developer & AI Engineer',
     template: '%s | Muhammad Shariq',
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://github.com/shariq001',
+    url: 'https://muhammad---shariq.vercel.app',
     title: 'Muhammad Shariq — Frontend Developer & AI Engineer',
     description: 'Portfolio of Muhammad Shariq, a Next.js frontend developer focused on Agentic AI and stunning web experiences.',
     siteName: 'Muhammad Shariq Portfolio',

@@ -7,7 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    // Replace with your actual domain once deployed
-    sitemap: 'https://github.com/shariq001/sitemap.xml',
+    sitemap: 'https://muhammad---shariq.vercel.app/sitemap.xml',
   };
 }
