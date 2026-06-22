@@ -24,7 +24,7 @@ export default function Experience() {
           </div>
           
           <div className="md:hidden mb-2">
-            <span className="text-primary font-mono text-sm font-bold">Feb 2024 — Apr 2024</span>
+            <span className="text-primary font-mono text-sm font-bold">Feb 2025 — Apr 2025</span>
           </div>
 
           <div className="bg-surface/30 backdrop-blur-xl border border-white/10 rounded-2xl p-6 md:p-8 flex-grow hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_rgba(0,255,255,0.1)] relative overflow-hidden">
@@ -34,6 +34,12 @@ export default function Experience() {
             <p className="text-muted leading-relaxed">
               Translated complex UI/UX wireframes into highly responsive, interactive web interfaces. Collaborated with design and backend teams to ensure pixel-perfect implementations and seamless API integrations.
             </p>
+            <div className="mt-6 relative z-10">
+              <a href="/Certificate.jpg" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-primary/30 text-primary font-mono text-sm font-bold hover:bg-primary/10 hover:border-primary transition-all duration-300 hover:shadow-[0_0_15px_rgba(0,255,255,0.2)]">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"></path></svg>
+                View Certificate
+              </a>
+            </div>
           </div>
 
         </div>
