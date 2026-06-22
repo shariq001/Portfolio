@@ -18,7 +18,7 @@ export default function RandomStars() {
   }, []);
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div className="absolute inset-0 overflow-hidden pointer-events-none animate-fade-in-slow">
       {stars.map((star) => (
         <div 
           key={star.id}

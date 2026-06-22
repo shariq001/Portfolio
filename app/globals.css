@@ -28,7 +28,10 @@
     animation: spin-slow 20s linear infinite;
   }
   .star {
-    animation: twinkle 4s ease-in-out infinite alternate;
+    animation: twinkle 6s ease-in-out infinite alternate;
+  }
+  .animate-fade-in-slow {
+    animation: fade-in-slow 2.5s ease-in-out forwards;
   }
   .clip-star {
     clip-path: polygon(50% 0%, 55% 45%, 100% 50%, 55% 55%, 50% 100%, 45% 55%, 0% 50%, 45% 45%);
@@ -44,6 +47,11 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes fade-in-slow {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 @keyframes gradient-x {
@@ -73,6 +81,6 @@
 }
 
 @keyframes twinkle {
-  0% { opacity: 0.2; transform: scale(0.6); filter: drop-shadow(0 0 1px rgba(0, 255, 255, 0)); }
-  100% { opacity: 1; transform: scale(1.2); filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.8)); }
+  0% { opacity: 0; transform: scale(0.4); filter: drop-shadow(0 0 0px rgba(0, 255, 255, 0)); }
+  100% { opacity: 0.9; transform: scale(1.1); filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.6)); }
 }
