@@ -33,6 +33,9 @@
   .animate-fade-in-slow {
     animation: fade-in-slow 2.5s ease-in-out forwards;
   }
+  .animate-page-enter {
+    animation: page-enter 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
   .clip-star {
     clip-path: polygon(50% 0%, 55% 45%, 100% 50%, 55% 55%, 50% 100%, 45% 55%, 0% 50%, 45% 45%);
   }
@@ -52,6 +55,19 @@
 @keyframes fade-in-slow {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+@keyframes page-enter {
+  0% {
+    opacity: 0;
+    transform: scale(0.98) translateY(15px);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0px);
+  }
 }
 
 @keyframes gradient-x {
