@@ -48,14 +48,14 @@ export default function Nav() {
                 {link.name}
               </Link>
             ))}
-            <a href="/Muhammad_Shariq_Resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 ml-2 px-5 py-2 text-sm font-bold text-surface bg-primary hover:bg-primary-dim rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_rgba(0,255,255,0.4)]">
+            <a href="/Muhammad_Shariq_Resume.pdf?v=2" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 ml-2 px-5 py-2 text-sm font-bold text-surface bg-primary hover:bg-primary-dim rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_rgba(0,255,255,0.4)]">
               Resume
             </a>
           </div>
 
           {/* Mobile Right Side Controls */}
           <div className="md:hidden flex items-center gap-3 z-10 relative">
-            <a href="/Muhammad_Shariq_Resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 px-4 py-2 text-xs font-bold text-surface bg-primary hover:bg-primary-dim rounded-full transition-all duration-300">
+            <a href="/Muhammad_Shariq_Resume.pdf?v=2" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 px-4 py-2 text-xs font-bold text-surface bg-primary hover:bg-primary-dim rounded-full transition-all duration-300">
               Resume
             </a>
             <button 
