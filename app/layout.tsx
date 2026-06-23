@@ -3,7 +3,7 @@ import { Inter, Geist, Fira_Code } from 'next/font/google';
 import './globals.css';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
-import FiverrButton from '@/components/FiverrButton';
+import FreelanceButtons from '@/components/FreelanceButtons';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const geist = Geist({ subsets: ['latin'], variable: '--font-geist' });
 const firaCode = Fira_Code({ subsets: ['latin'], variable: '--font-fira-code' });
@@ -63,7 +63,7 @@ export default function RootLayout({
           {children}
         </div>
         <Footer />
-        <FiverrButton />
+        <FreelanceButtons />
       </body>
     </html>
   );
