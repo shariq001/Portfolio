@@ -10,6 +10,15 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: 'resume-builder',
+    title: 'ATS-Optimized Resume Builder',
+    description: 'An elegant, modern, and highly-responsive Resume Builder application designed to help users bypass Applicant Tracking Systems.',
+    techPills: ['Next.js 14', 'Tailwind CSS', 'Framer Motion', 'FastAPI', 'PostgreSQL'],
+    liveUrl: 'https://resume---builder.vercel.app/',
+    repoUrl: 'https://github.com/shariq001/resume-builder.git',
+    visibility: 'public'
+  },
+  {
     id: 'ai-native-book',
     title: 'AI-Native Interactive Book',
     description: 'Educational platform engineered with SDD, Spec-Kit Plus, and AI CLI tools — zero manual intervention.',
@@ -19,12 +28,12 @@ export const projects: Project[] = [
     visibility: 'public'
   },
   {
-    id: 'ugc-creator',
-    title: 'UGC Creator Portfolio',
-    description: 'Highly responsive Next.js media gallery and client outreach tool.',
-    techPills: ['Next.js', 'Tailwind CSS', 'Vercel', 'SDD'],
-    liveUrl: 'https://ugc-creator-portfolio.vercel.app/',
-    repoUrl: 'https://github.com/shariq001/UGC_Creator_Portfolio.git',
+    id: 'mens-fitness-ugc',
+    title: "Men's Fitness UGC Creator Portfolio",
+    description: "A high-performance, premium portfolio template designed for Men's Fitness UGC creators, calisthenics athletes, and strength-training professionals.",
+    techPills: ['Next.js 15', 'React 19', 'Tailwind CSS v4', 'Framer Motion'],
+    liveUrl: 'https://etsy-ugc-temp1-nu.vercel.app',
+    repoUrl: null,
     visibility: 'public'
   },
   {
@@ -43,15 +52,6 @@ export const projects: Project[] = [
     techPills: ['Python', 'LLMs', 'LinkedIn API', 'Google API'],
     liveUrl: null,
     repoUrl: 'https://github.com/shariq001/AI_Employee_Silver',
-    visibility: 'public'
-  },
-  {
-    id: 'general-chatbot',
-    title: 'General Chatbot',
-    description: 'A versatile chatbot for general queries using large language models and simple prompt pipelines.',
-    techPills: ['Python', 'LLMs', 'Panel'],
-    liveUrl: null,
-    repoUrl: 'https://github.com/shariq001/DeepLearning_General_Chatbot.git',
     visibility: 'public'
   },
   {

@@ -16,7 +16,7 @@ export default function GithubStats() {
           <div className="text-primary mb-2">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
           </div>
-          <div className="text-4xl font-black text-white mb-1 font-mono">45+</div>
+          <div className="text-4xl font-black text-white mb-1 font-mono">50+</div>
           <div className="text-sm font-bold text-muted font-mono tracking-wider uppercase">Public Repos</div>
         </div>
 
@@ -28,7 +28,7 @@ export default function GithubStats() {
           </div>
           <div className="flex flex-col justify-center h-[40px]">
             <div className="text-xl font-bold text-white font-mono leading-tight">
-              Python · TypeScript
+              Python . Typescript . Next.Js . SDD
             </div>
           </div>
           <div className="text-sm font-bold text-muted font-mono tracking-wider uppercase mt-1">Top Stack</div>

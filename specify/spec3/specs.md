@@ -16,9 +16,9 @@ Export an array of 6 project objects with typed fields.
 |---|---|---|---|---|
 | 1 | AI-Native Interactive Book | ✅ | ✅ | public |
 | 2 | AI Employee Automation Tool | — | ✅ | private |
-| 3 | UGC Creator Portfolio | ✅ | ✅ | public |
+| 3 | Men's Fitness UGC Creator Portfolio | ✅ | — | public |
 | 4 | Dashboard — Frontend via SDD | ✅ | ✅ | public |
-| 5 | General Chatbot | — | ✅ | public |
+| 5 | ATS-Optimized Resume Builder | ✅ | ✅ | public |
 | 6 | In-Memory Todo List App | — | ✅ | public |
 
 **Commit:** `feat(data): add projects data layer`

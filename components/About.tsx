@@ -16,13 +16,13 @@ export default function About() {
             
             <div className="text-lg md:text-xl text-muted space-y-6 leading-relaxed relative z-10">
               <p>
-                I am a passionate <strong className="text-white">Computer Science student at HITMS</strong> (Expected 2029), dedicated to pushing the boundaries of web experiences.
+                I am a <strong className="text-white">Next.js Frontend Developer</strong> and Computer Science undergraduate dedicated to building robust, SEO-optimized web applications.
               </p>
               <p>
-                My expertise lies heavily in <strong className="text-white">Agentic AI</strong>, building robust <strong className="text-white">RAG pipelines</strong>, and engineering autonomous workflows that reduce manual intervention to zero. 
+                Leveraging <strong className="text-white">Spec-Driven Development</strong> and <strong className="text-white">CLI AI tools</strong>, I engineer modern web solutions with relentless precision and scale.
               </p>
               <p>
-                I thrive on translating complex architectures into stunning, highly responsive interfaces. Currently, I am actively available for new projects, internships, and dynamic collaborations.
+                Currently advancing through the <strong className="text-white">Panaversity Agentic AI Developer</strong> roadmap, my core mission is merging high-performance frontend architectures with <strong className="text-white">next-generation AI automation</strong> to deliver uncompromising, impactful results.
               </p>
             </div>
           </div>

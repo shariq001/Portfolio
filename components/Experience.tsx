@@ -16,8 +16,8 @@ export default function Experience() {
           
           <div className="absolute -left-[41px] md:relative md:left-0 md:w-48 flex-shrink-0 flex md:justify-end mt-1 md:mt-0">
              <div className="hidden md:block text-right pr-8">
-               <div className="text-primary font-mono font-bold">Feb 2024</div>
-               <div className="text-muted text-sm font-mono">Apr 2024</div>
+               <div className="text-primary font-mono font-bold">Feb 2025</div>
+               <div className="text-muted text-sm font-mono">Apr 2025</div>
              </div>
              {/* Timeline Node */}
              <div className="w-5 h-5 rounded-full bg-surface border-4 border-primary z-10 md:absolute md:-right-[10px] md:top-1 group-hover:scale-125 transition-transform duration-300 shadow-[0_0_15px_rgba(0,255,255,0.5)]"></div>
@@ -30,7 +30,7 @@ export default function Experience() {
           <div className="bg-surface/30 backdrop-blur-xl border border-white/10 rounded-2xl p-6 md:p-8 flex-grow hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_rgba(0,255,255,0.1)] relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-primary transition-colors">Frontend Developer Intern</h3>
-            <h4 className="text-lg text-white/70 font-mono mb-4">Innova Tech</h4>
+            <h4 className="text-lg text-white/70 font-mono mb-4">InnovaTech</h4>
             <p className="text-muted leading-relaxed">
               Translated complex UI/UX wireframes into highly responsive, interactive web interfaces. Collaborated with design and backend teams to ensure pixel-perfect implementations and seamless API integrations.
             </p>

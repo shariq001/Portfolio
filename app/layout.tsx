@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     default: 'Muhammad Shariq — Frontend Developer & AI Engineer',
     template: '%s | Muhammad Shariq',
   },
-  description: 'Portfolio of Muhammad Shariq, a Next.js frontend developer focused on Agentic AI, RAG pipelines, and autonomous workflows. Computer Science student at HITMS and Innova Tech alum.',
+  description: 'Portfolio of Muhammad Shariq, a Next.js frontend developer focused on Agentic AI, RAG pipelines, and autonomous workflows. Computer Science student at HITMS and InnovaTech alum.',
   keywords: ['Muhammad Shariq', 'Frontend Developer', 'AI Engineer', 'Next.js Developer', 'React Developer', 'Agentic AI', 'RAG Pipelines', 'TypeScript', 'Python'],
   authors: [{ name: 'Muhammad Shariq' }],
   creator: 'Muhammad Shariq',
